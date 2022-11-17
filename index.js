@@ -1,23 +1,49 @@
-//////////////
-// we have a basic skeleton here to help you start.
-// if you dont want to use it you dont have to -
-// just clear the file and start from scratch
-//////////////
+//data info
+const API_BASE = 'https://www.balldontlie.io/api/v1/stats/?dates[]=';
+
 
 // notice in our html we have a node with ID "app"
 // hint: use this reference later to inject data into your page
 const app = document.getElementById('app');
 
-async function getData() {
+// this function geting date parmeter adn feching data of 
+// all games at this date
+async function queryEndpoint(date){
+  let data = null;
+  try{
+    const response = await fetch(API_BASE.concat(date))
+    console.log(response)
+    if (response.status === 200) {
+      data = await response.json();
+    }
+   } catch (error) {
+      console.log('api error');
+      console.error(error);
+   }
+  return data;
+}
+
+
+async function getData(){
   // write you logic for getting the data from the API here
   // return your data from this function
-  const data = null;
+  let data = null;
+  
   return data;
 }
 
 function clearUI() {
+  clearPlayerUI()
   while (app.firstChild) {
     app.removeChild(app.firstChild);
+  }
+}
+
+function clearPlayerUI(){
+  for (const child of app.firstChild){
+    if(child.firstChild){
+      child.removeChild(child.firstChild)
+    }
   }
 }
 
@@ -27,9 +53,9 @@ async function renderUI(data) {
 
   // you have your data! add logic here to render it to the UI
   // notice in the HTML file we call render();
-  const dummyItemElement = Object.assign(document.createElement("div"), { className: "item" })
+  const dummyItemElement = Object.assign(document.createElement("div"), { className: "player" })
   const dummyContentElement = Object.assign(document.createElement("div"), { className: "content" })
-  dummyContentElement.innerHTML = "hey";
+  dummyContentElement.innerHTML = "player";
   dummyItemElement.appendChild(dummyContentElement);
   app.appendChild(dummyItemElement);
 }
