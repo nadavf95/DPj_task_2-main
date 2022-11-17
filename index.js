@@ -24,28 +24,28 @@ async function queryEndpoint(date){
 }
 
 
-async function getData(){
+async function getGamesData(date){
   // write you logic for getting the data from the API here
   // return your data from this function
-  let data = null;
+  const gamesData = await queryEndpoint(date);
+
   
   return data;
 }
 
 function clearUI() {
   clearPlayerUI()
-  while (app.firstChild) {
-    app.removeChild(app.firstChild);
-  }
+  // TO DO: clear games and than hide games sectom 
 }
 
 function clearPlayerUI(){
-  for (const child of app.firstChild){
-    if(child.firstChild){
-      child.removeChild(child.firstChild)
-    }
-  }
+  // TO DO: clear players and than hide player section
 }
+
+
+
+
+
 
 async function renderUI(data) {
 
@@ -60,6 +60,7 @@ async function renderUI(data) {
   app.appendChild(dummyItemElement);
 }
 
-const data = await getData();
+// maybe to this:
 
-await renderUI(data);
+//const data = await getData();
+//await renderUI(data);
