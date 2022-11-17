@@ -2,9 +2,29 @@
 /* LAYOUT HELPERS */
 /* !!!!!!!!!!!!!!!!!!!! */
 
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
 #container {
   width: 100%;
   margin: 0 auto;
+}
+
+.gamesSection{
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-basis: 100%;
+}
+
+.playersSection{
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-basis: 100%;
 }
 
 .row {
@@ -30,11 +50,11 @@
   padding: 10px;
 
   /* design helper */
-  border: 1px dotted blueviolet;
+  border: 1px dotted rgb(226, 64, 43);
 }
 
 .item.meta {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 
 .item.cell {
@@ -72,7 +92,7 @@
 /* !!!!!!!!!!!!!!!!!!!! */
 
 body {
-  background-color: #f5f5f5;
+  background-color: #66a5df;
   color: #2d2c2c;
   font-family: Arial, Helvetica, sans-serif;
 }
