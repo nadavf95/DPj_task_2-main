@@ -101,3 +101,7 @@ body {
   /* visual helper */
   border: 1px solid blueviolet;
 }
+
+.game-button{
+  background-color:bisque
+}
