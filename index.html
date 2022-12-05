@@ -14,32 +14,13 @@
       <div class="row">
         <div class="item meta">
           <div class="content">
-
-            <div class="content">
-              <p>insert a date in a form of YYYY-MM-DD .</p>
-              <label for="date">date:</label>
-              <input type="text" id="date-input" name="date-input"><br><br>
-              <button id="submit-button">
-                submit
-              </button>
-            </div>  
-
-            <div class="content">
-              <h3>cost</h3>
-              <select id="data-filter">
-                <option value="none">none</option>
-                <option value="East">East</option>
-                <option value="West">West</option>z
-              </select>
-            </div>  
-
-            <div class="content">
-              <h3>sort by</h3>
-              <select id="data-sort">
-                <option value="a-z">a-z</option>
-                <option value="top score">top score</option>
-              </select>
-            </div>
+            
+            <p>insert a date in a form of YYYY-MM-DD .</p>
+            <label for="date">date:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <button id="button" oncontextmenu="event.preventDefault();">
+              submit
+            </button>
             
           </div>
         </div>
@@ -47,8 +28,88 @@
       
       <div id="app" class="row">
 
-      </div>
+        <!-- crating Games section-->
+        <div class="gamesSection">
+          <div class="content">
+            <h2>Games</h2>
+            <p>Example text.</p>
 
+            <!-- TO DO game template !!!!!!!!!!!!!!!!-->
+            <template id="game-template">
+              <div class="item">
+               <div class="content">
+                <h2>Example Heading</h2>
+                 <p>Example text.</p>
+               </div>
+             </div>
+           </template>
+          </div>
+        </div>
+        
+        <!-- crating Players section-->
+        <div class="PlayersSection">
+          <div class="content">
+            <h2>Players</h2>
+            <p>Example text.</p>
+            <div class="item meta">
+              <div class="row">
+                <div class="item meta">
+                  <div class="content">
+                    <p>Players order</p>
+                    <select id="data-sort">
+                      <option value="a-z">A to Z</option>
+                      <option value="scorer">top scorer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="item meta">
+                  <div class="content">
+                    <p>position</p>
+                    <select id="data-filter">
+                      <option value="-">n/a</option>
+                      <option value="G">G</option>
+                      <option value="F">F</option>
+                      <option value="C">C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TO DO Player template !!!!!!!!!!!!!!!!-->
+            <template id="player-template">
+              <div class="item">
+                <div class="content">
+                  <h2>Example Heading</h2>
+                  <p>Example text.</p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+        
+
+        <!-- Start example showing the css layout -->
+
+        
+        <div class="item">
+          <div class="content">
+            <h2>Example Heading</h2>
+            <p>Example text.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="content">
+            <h2>Example Heading</h2>
+            <p>Example text.</p>
+          </div>
+        </div>
+
+        <!-- End example showing the css layout -->
+        
+
+      </div>
     </div>
   </div>
   <script type="module" src="index.js"></script>
